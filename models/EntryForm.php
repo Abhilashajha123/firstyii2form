@@ -14,7 +14,7 @@ class EntryForm extends Model
     public function rules()
     {
         return [
-            [['email'], 'required'],
+            [['email','phone'], 'required'],
             ['email', 'email'],
             ['name','required','message'=>'User name must be filled'],
             [['phone'],'number','min'=>3],

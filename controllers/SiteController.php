@@ -96,8 +96,8 @@ class SiteController extends Controller
             // valid data received in $model
 
             // do something meaningful here about $model ...
-
-            return $this->render('entry-confirm', ['model' => $model]);
+            $message="welcome to new page";
+            return $this->render('entry-confirm', ['model' => $model,'message'=>$message]);
         } else {
             // either the page is initially displayed or there is some validation error
             return $this->render('entry', ['model' => $model]);
